@@ -1,0 +1,232 @@
+/* Asegúrate de que el contenedor padre tenga text-align: center */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #b42323, #a4c2f1);
+    margin: 0;
+    padding: 20px;
+    color: #000000;
+    background-image: url('Pan1.jpg'); /* Reemplaza 'ImagenVerde.jpg' con la ruta de tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center; /* Centra el contenido en el contenedor padre */
+}
+
+/* Estilo del título */
+h1 {
+    background-color: #ffbe81b4; /* Fondo de color durazno claro */
+    color: #0055A4; /* Texto azul */
+    font-size: 2.5em;
+    margin: 20px auto; /* Centra el título horizontalmente */
+    padding: 10px 20px; /* Espacio alrededor del texto */
+    border-radius: 8px; /* Bordes redondeados */
+    display: inline-block; /* Para que el fondo se adapte al tamaño del texto */
+}
+
+/* Estilo responsivo para el título */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Ajuste del tamaño de fuente para pantallas más pequeñas */
+        padding: 8px 16px; /* Ajuste del padding para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Ajuste del tamaño de fuente para pantallas muy pequeñas */
+        padding: 6px 12px; /* Ajuste del padding para pantallas muy pequeñas */
+    }
+}
+
+
+#traducir-btn {
+    background-color: #ff0000d2;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#traducir-btn:hover {
+    background-color: rgba(0, 4, 255, 0.425);
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 2px solid #0055A4;
+    border-radius: 5px;
+}
+
+.tables {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    width: 45%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #ff0303; /* Fondo azul para los encabezados */
+    color: white; /* Texto blanco para los encabezados */
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+th:hover {
+    background-color: #004494; /* Azul más oscuro al pasar el mouse */
+}
+
+tr:nth-child(even) {
+    background-color: #cfb049; /* Fondo rojo claro para las filas pares */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffd18b; /* Fondo azul claro para las filas impares */
+}
+
+tr:hover {
+    background-color: #ddd; /* Fondo gris claro al pasar el mouse */
+}
+
+/* Recuadro para el objetivo del diccionario */
+.section-box {
+    background-color: #ffd781;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los recuadros de significados */
+.selected-word {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 999;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    font-size: 1.2em;
+    color: #555;
+    text-align: justify; /* Texto justificado */
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Añadido para incluir el padding en el cálculo del tamaño */
+    padding-right: 100px; /* Espacio para la "x" */
+}
+
+.selected-word.spanish {
+    color: #EF4135;
+}
+
+.selected-word.french {
+    color: #0055A4;
+}
+
+.highlight {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #0055A4;
+    font-weight: bold;
+}
+
+.highlight:hover {
+    color: #0055A4;
+}
+
+.close-btn {
+    position: absolute;
+    top: -1px; /* Ajusta la distancia desde arriba */
+    right: -5px; /* Ajusta la distancia desde la derecha */
+    background-color: transparent;
+    color: red;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 999; /* Asegura que la "x" esté sobre el texto */
+}
+
+/* Margen para evitar que el texto se dañe por la "x" */
+.selected-word p {
+    margin-right: 100px; /* Ajusta el margen derecho según sea necesario */
+}
+
+.close-btn:hover {
+    color: darkred;
+}
+
+.top-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#traducir-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#saber-mas-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+#saber-mas-btn:hover {
+    background-color: #0056b3;
+}
+
+.selected-word {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.close-btn {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.subrayar {
+    text-decoration: underline;
+}
+
+.subrayar {
+    text-decoration: underline;
+    background-color: #49cf8c;
+}
+

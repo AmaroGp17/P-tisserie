@@ -1,0 +1,178 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #b42323, #a4c2f1);
+    margin: 0;
+    padding: 20px;
+    color: #000000;
+    background-image: url('Pan1.jpg'); /* Reemplaza 'Pan1.jpg' con la ruta de tu imagen */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center; /* Centra el contenido en el contenedor padre */
+}
+
+/* Estilo del título */
+h1 {
+    background-color: #ffbe819f; /* Fondo de color durazno claro */
+    color: #050505; /* Texto azul */
+    font-size: 2.2em;
+    text-align: center;
+    margin: 30px auto; /* Centra el título horizontalmente */
+    padding: 10px 20px; /* Espacio alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    display: inline-block; /* Para que el fondo se adapte al tamaño del texto */
+    margin-bottom:10px;;
+    
+}
+
+/* Estilo responsivo para el título */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Ajuste del tamaño de fuente para pantallas más pequeñas */
+        padding: 8px 16px; /* Ajuste del padding para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Ajuste del tamaño de fuente para pantallas muy pequeñas */
+        padding: 6px 12px; /* Ajuste del padding para pantallas muy pequeñas */
+    }
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px;
+    background-color: rgba(252, 154, 98, 0.733); /* Fondo semi-transparente para resaltar el contenido */
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    text-align:center; /* Asegura que el contenido dentro del contenedor esté alineado a la izquierda */
+}
+
+h2 {
+    text-align: center; /* Centrar el texto */
+    background-color: rgba(255, 86, 86, 0.404); /* Fondo semitransparente */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgb(0, 0, 0); /* Sombra suave */
+    color: #111111; /* Color del texto */
+    font-size: 1.5em; /* Tamaño de la fuente */
+    margin-bottom: 15px; /* Espacio inferior */
+    font-weight: bold; /* Negrita */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.514); /* Sombra de texto */
+    display: inline-block;
+}
+
+/* Ejemplo adicional para estilizar los enlaces dentro del h2 */
+h2 a {
+    color: inherit; /* Hereda el color del h2 */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+h2 a:hover {
+    color: #cc3333; /* Color al pasar el ratón */
+}
+
+p {
+    font-size: 1.5em; /* Tamaño de la fuente */
+    line-height: 1; /* Altura de línea para mejorar la legibilidad */
+    color: #000000; /* Color del texto */
+    margin-bottom: 15px; /* Espacio inferior */
+    text-align: justify; /* Justificar el texto */
+    padding: 0 10px; /* Espaciado interno para mayor legibilidad */
+}
+
+/* Estilos adicionales para párrafos dentro de la clase .container */
+
+/* Estilo para enlaces dentro de los párrafos */
+p a {
+    color: #007BFF; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+p a:hover {
+    color: #0056b3; /* Color del enlace al pasar el ratón */
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    background-color: #991111;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+.toggle-btn:hover {
+    background-color: #cc3333;
+}
+
+.content {
+    display: none;
+    padding: 10px;
+}
+
+.content.show {
+    display: block;
+}
+
+.corpus-link {
+    background-color: #ff00007e;
+    color: #FFFFFF;
+    text-align: right;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.corpus-link:hover {
+    background-color: #8dd5eb;
+}
+
+/* Estilos para el botón "Volver al diccionario" */
+.return-button {
+    background-color: #0f0f0f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 50px; /* Ajusta el margen superior para centrar verticalmente */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+.corpus-link {
+    margin-bottom: 20px;
+}
+
+.return-button:hover {
+    background-color: #da0d0d;
+}
+
+/* Estilos para el botón de traducción */
+#traducir-btn {
+    display: block;
+    margin: 0 auto; /* Centrar horizontalemente */
+    width: 150px; /* Ancho del botón */
+    height: 30px; /* Alto del botón */
+    font-size: 1.2em; /* Tamaño de la fuente */
+    background-color: #18ad51; /* Color de fondo */
+    color: rgb(248, 250, 239); /* Color del texto */
+    border-radius: 3px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor puntero */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#traducir-btn:hover {
+    background-color: #e40e0e; /* Color de fondo al pasar el ratón */
+}

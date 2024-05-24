@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diccionario Español-Francés</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Pâtisserie : techniques et concepts professionnels</h1>
+    <h1>Pastelería: técnicas y conceptos profesionales</h1>
+    <div class="section-box">
+        <section id="objetivo-frances">
+            <h2>Description du Projet</h2>
+            <p>Cette projet vise à recueillir et classifier les termes des techniques et des préparations les plus importantes dans la pâtisserie en français et leurs équivalents en espagnol. Le corpus en espagnol est conformé par des articles et guides de pâtisserie de l'Espagne, de la Colombie et du Mexique. En français le corpus est conformé par des articles et guides de la France, publiées entre 2019 et 2024, comme base pour soutenir et identifier la terminologie pertinente</p>
+        </section>
+        <section id="objetivo-espanol" style="display: none;">
+            <h2>Descripción del Proyecto</h2>
+            <p>Este proyecto tiene como objetivo recopilar y clasificar los términos de las técnicas y preparaciones más importantes en pastelería en francés y sus equivalentes en español. El corpus en español está conformado por artículos y guías de pastelería de España, Colombia y México. En francés, el corpus está formado por artículos y guías de Francia, publicados entre 2019 y 2024, como base para sustentar e identificar terminología relevante.</p>
+        </section>
+        <div class="top-buttons">
+            <button id="traducir-btn">Traduire</button>
+            <a id="saber-mas-btn" href="mas-del-tema.html">Saber más</a>
+        </div>
+    </div>
+
+    <input type="text" id="search" placeholder="Buscar...">
+
+    <div class="tables">
+        <div class="table-container">
+            <h2>Español</h2>
+            <table id="spanish-table">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0, 'spanish')">Español</th>
+                    </tr>
+                </thead>
+                <tbody id="spanish-dictionary">
+                    <!-- Las palabras en español se insertarán aquí -->
+                </tbody>
+            </table>
+        </div>
+        <div class="table-container">
+            <h2>Francés</h2>
+            <table id="french-table">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0, 'french')">Francés</th>
+                    </tr>
+                </thead>
+                <tbody id="french-dictionary">
+                    <!-- Las palabras en francés se insertarán aquí -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="selected-word" class="selected-word" style="display: none;"></div>
+
+    <script src="script.js"></script>
+
+    <div id="selected-word" class="selected-word" style="display: none;"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
